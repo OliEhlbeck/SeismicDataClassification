@@ -37,6 +37,6 @@ Confusion Matrix:
 Accuracy: 0.8423
 ```
 
-![alt text]
-![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/fe8f0ebaea4182114427835e18efdc844a66a19d/Vorticity2D.jpg?raw)
+![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/833f305c697bf8c5c83c30609eb41ae75916a8f9/images/FeaturesSVM.jpg?raw)
+![alt text](?raw)
 
