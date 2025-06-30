@@ -1,6 +1,5 @@
 import json
 import random
-
 from sklearn.model_selection import train_test_split
 
 def load_data(use_z_only : bool):
@@ -14,6 +13,7 @@ def load_data(use_z_only : bool):
     dataset = json.load(open(file_path, 'r'))
 
     random.shuffle(dataset)
+    # eventually cap the maximum size of the data
     dataset = dataset[:50000]
 
     # Split into X and Y. X contains features, Y contains class-label
@@ -23,4 +23,5 @@ def load_data(use_z_only : bool):
     # Split into training and testing
     print("Split into training and testing ... ")
     return train_test_split(X, Y, test_size=0.2, random_state=42)
+
 
