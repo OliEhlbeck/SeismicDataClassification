@@ -4,9 +4,9 @@ from sklearn.model_selection import train_test_split
 
 def load_data(use_z_only : bool):
     if use_z_only == True:
-        file_path = "D:/Oli/Uni/23_24 WiSe/MachLearningGeoPhy/datasetPycharm/datasetPycharm_z.json"
+        file_path = "dataset/dataset_z.json"
     else:
-        file_path = "D:/Oli/Uni/23_24 WiSe/MachLearningGeoPhy/datasetPycharm/datasetPycharm_all.json"
+        file_path = "dataset/dataset_all.json"
 
     print("Load and prepare dataset ... ")
 
