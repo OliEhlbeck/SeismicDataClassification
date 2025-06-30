@@ -5,6 +5,7 @@
 Seismographs record ground vibrations caused by various geological events. One key goal in seismology is to **automatically determine the cause of these tremors**, enabling distinction between different types of earthquakes and other ground motion sources.\
 **Rockfalls**, for example, are a frequent cause of seismograph deflections, especially in **mountainous and volcanic regions**.
 
+![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/cec6bd4dd65448b021360727cbfadaa51939d16a/images/Soufriere_Hills.jpg?raw)
 
 
 A typical case is the island of **Montserrat in the Caribbean**, where three seismic monitoring stations continuously record ground motion. The island is home to the **Soufrière Hills volcano**, whose eruptions in the 1990s **forced the relocation of much of the island’s population** due to volcanic hazards.
@@ -39,6 +40,8 @@ In geoscience, **data availability is often limited**, posing challenges for mod
 ## Feature Extraction
 
 Using `generate_dataset.py`, various **statistical features** (e.g., **kurtosis**, **skewness**, **variance**, **mean**, **range**) are extracted from the waveform amplitudes of each station component.
+
+![Feature Importance](https://github.com/OliEhlbeck/SeismicDataClassification/blob/833f305c697bf8c5c83c30609eb41ae75916a8f9/images/FeaturesSVM.jpg?raw=true)
 
 You can choose between:
 
@@ -94,7 +97,7 @@ In `load_data.py`, control how many events to load for training (RAM management)
 maxcap = 50000  # Example cap for training
 ```
 
-Even when using Z-components only, the dataset may exceed 3GB.
+Even when using Z-components only, the dataset may exceed 3GB. 
 
 ---
 
@@ -115,7 +118,7 @@ python train_gdm_model.py
 ```
 
 **Note:**\
-When working with the Z-only dataset, remember that **feature dimensions change (11 vs. 33 features)**—this must be adjusted in your training scripts.
+When working with the Z-only dataset, remember that **feature dimensions change (11 vs. 33 features)**—this must be adjusted in your training scripts. 
 
 ---
 
@@ -132,6 +135,7 @@ Accuracy: 0.8423
 
 And here’s a **confusion matrix after scaling up to 50,000 files with Gradient Descent** (performance improves significantly):
 
+![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/3389fc589a78dfd08f12f134aae86efff304ad48/images/ConfusionMatrixGradienDescent.jpg?raw)
 
 
 ---
@@ -173,7 +177,5 @@ For questions, collaborations, or data requests:
 
 ---
 
-## License
 
-*(You can specify a license here, e.g., MIT, GPL, or Creative Commons. Let me know if you'd like to add one.)*
 
