@@ -22,6 +22,21 @@ rf_may/
 
 where each of those four indigrients consist of several hundret subfolder, which in turn consist of .ASC files. In these, the amplitude of the seismograph from three differen researchs station is needed. 
 
+Gradient descent method using only the Z components performed very well: 
+```
+Confusion Matrix: 
+[[4269  147]
+ [   6 5578]]
+Accuracy: 0.9847
+```
+However, the support vector machine's results were worse 
+```
+Confusion Matrix: 
+[[3208  1193]
+ [   384 5215]]
+Accuracy: 0.8423
+```
 
+![alt text]
 ![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/fe8f0ebaea4182114427835e18efdc844a66a19d/Vorticity2D.jpg?raw)
 
