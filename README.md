@@ -17,3 +17,6 @@ hy: {hy_jan , hy_mai}
 rf: {rf_jan, rf_mai}
 
 where each of those four indigrients consist of several hundret subfolder, which in turn consist of .ASC files. In these, the amplitude of the seismograph from three differen researchs station is needed. 
+
+![alt text](https://github.com//OliEhlbeck/SeismicDataClassification/edit/main/Stochastic Vorticity Simulation.png?raw)=true
+
