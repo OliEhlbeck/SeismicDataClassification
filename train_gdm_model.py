@@ -46,7 +46,7 @@ print(cm)
 print("Accuracy:",  accuracy_score(Y_test, prediction))
 
 # Save model to file
-target_folder = "C:/Users/Oli/PycharmProjects/GeoPhyMl/Models"
+target_folder = "Models"
 target_file = target_folder + "/gdm_model.pkl"
 print(f"Saving dataset to {target_file}...")
 with open(target_file, 'wb') as f:
