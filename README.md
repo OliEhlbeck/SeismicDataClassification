@@ -158,7 +158,9 @@ I see this project as my starting point in machine learning for geoscience, and 
 
 | File/Folder           | Purpose                                    |
 | --------------------- | ------------------------------------------ |
-| `data/`               | Raw seismic data folders                   |
+| `DATA/`               | Raw seismic data folders                   |
+| `dataset/`            | datasets equipped with features            |
+| `Models/`             | storage for trained models                 |
 | `generate_dataset.py` | Feature extraction script                  |
 | `load_data.py`        | Dataset loading and sample size control    |
 | `train_svm_model.py`  | SVM training                               |
