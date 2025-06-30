@@ -3,12 +3,12 @@ import utils
 
 datas = {
     "hy": [
-        "D:/Oli/Uni/23_24 WiSe/MachLearningGeoPhy/DATA/hy_jan",
-        "D:/Oli/Uni/23_24 WiSe/MachLearningGeoPhy/DATA/hy_may"
+        "DATA/hy_jan",
+        "DATA/hy_may"
     ],
     "rf": [
-        "D:/Oli/Uni/23_24 WiSe/MachLearningGeoPhy/DATA/rf_jan",
-        "D:/Oli/Uni/23_24 WiSe/MachLearningGeoPhy/DATA/rf_may"
+        "DATA/rf_jan",
+        "DATA/rf_may"
     ],
 }
 
@@ -117,11 +117,11 @@ if __name__ == "__main__":
     dataset = list(zip(*data_scaled))
 
     # Write dataset_class to file
-    target_folder = "D:/Oli/Uni/23_24 WiSe/MachLearningGeoPhy/datasetPycharm"
+    target_folder = "dataset"
     if use_z_only:
-        output_file = f"{target_folder}/datasetPycharm_z.json"
+        output_file = f"{target_folder}/dataset_z.json"
     else:
-        output_file = f"{target_folder}/datasetPycharm_all.json"
+        output_file = f"{target_folder}/dataset_all.json"
     print(f"Saving dataset to {output_file}...")
     with open(output_file, 'w') as f:
         json.dump(dataset, f, indent=4)
