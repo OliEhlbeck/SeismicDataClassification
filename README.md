@@ -11,12 +11,17 @@ stations on that island is presented. several hundred of these have been categor
 floats over a short discrete period of time. i would like to use this dataset as an example to train
 basic machine learning models.
 
-The data is structured as follows: 
+The data is structured as follows:
 
-hy: {hy_jan , hy_mai}
-rf: {rf_jan, rf_mai}
+```
+hy_jan/
+hy_may/
+rf_jan/
+rf_may/
+```
 
 where each of those four indigrients consist of several hundret subfolder, which in turn consist of .ASC files. In these, the amplitude of the seismograph from three differen researchs station is needed. 
 
-![alt text](https://github.com//OliEhlbeck/SeismicDataClassification/edit/main/Stochastic Vorticity Simulation.png?raw)=true
+
+![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/fe8f0ebaea4182114427835e18efdc844a66a19d/Vorticity2D.jpg?raw)
 
