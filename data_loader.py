@@ -14,7 +14,8 @@ def load_data(use_z_only : bool):
 
     random.shuffle(dataset)
     # eventually cap the maximum size of the data
-    dataset = dataset[:50000]
+    maxcap = 50000
+    dataset = dataset[:maxcap]
 
     # Split into X and Y. X contains features, Y contains class-label
     X = [e[:-1] for e in dataset]
