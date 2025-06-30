@@ -2,19 +2,19 @@
 
 ## Background
 
-Seismographs record ground vibrations caused by various geological events. One key goal in seismology is to **automatically determine the cause of these tremors**, enabling distinction between different types of earthquakes and other ground motion sources.\
-**Rockfalls**, for example, are a frequent cause of seismograph deflections, especially in **mountainous and volcanic regions**.
+Seismographs record ground vibrations caused by various geological events. One key goal in seismology is to automatically determine the cause of these tremors, enabling distinction between different types of earthquakes and other ground motion sources.\
+Rockfalls, for example, are a frequent cause of seismograph deflections, especially in mountainous and volcanic regions.
 
 ![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/cec6bd4dd65448b021360727cbfadaa51939d16a/images/Soufriere_Hills.jpg?raw)
 
 
-A typical case is the island of **Montserrat in the Caribbean**, where three seismic monitoring stations continuously record ground motion. The island is home to the **Soufrière Hills volcano**, whose eruptions in the 1990s **forced the relocation of much of the island’s population** due to volcanic hazards.
+A typical case is the island of Montserrat in the Caribbean, where three seismic monitoring stations continuously record ground motion. The island is home to the **Soufrière Hills volcano**, whose eruptions in the 1990s forced the relocation of much of the island’s population due to volcanic hazards.
 
 ---
 
 ## Dataset Overview
 
-A **pre-classified seismic dataset** from Montserrat is available, containing several hundred labeled events from a short, discrete observation period.
+A pre-classified seismic dataset from Montserrat is available, containing several hundred labeled events from a short, discrete observation period.
 
 ### Data Structure:
 
@@ -31,22 +31,22 @@ Where:
 - `hy_*` = Hybrid earthquakes
 - `rf_*` = Rockfalls
 
-Each subfolder contains **hundreds of events**, with each event stored as **three **``** files** (one for each station component: E, N, Z).
+Each subfolder contains hundreds of events, with each event stored as three `` files (one for each station component: E, N, Z).
 
-In geoscience, **data availability is often limited**, posing challenges for model building and validation. This dataset offers a valuable opportunity to test **machine learning models for seismic event classification**.
+In geoscience, data availability is often limited, posing challenges for model building and validation. This dataset offers a valuable opportunity to test machine learning models for seismic event classification.
 
 ---
 
 ## Feature Extraction
 
-Using `generate_dataset.py`, various **statistical features** (e.g., **kurtosis**, **skewness**, **variance**, **mean**, **range**) are extracted from the waveform amplitudes of each station component.
+Using `generate_dataset.py`, various **statistical features** (e.g., kurtosis, skewness, variance, mean, range) are extracted from the waveform amplitudes of each station component.
 
 ![Feature Importance](https://github.com/OliEhlbeck/SeismicDataClassification/blob/833f305c697bf8c5c83c30609eb41ae75916a8f9/images/FeaturesSVM.jpg?raw=true)
 
 You can choose between:
 
-- **Full feature set (33 features)**: Using all three components (E, N, Z)
-- **Z-component only (11 features)**: Focused on the vertical component, shown to be most discriminative in this dataset
+- Full feature set (33 features): Using all three components (E, N, Z)
+- Z-component only (11 features): Focused on the vertical component, shown to be most discriminative in this dataset
 
 
 
@@ -56,7 +56,7 @@ You can choose between:
 
 Requirements:
 
-- **Python 3.9**
+- Python 3.9
 - Install dependencies:
 
 ```bash
@@ -118,7 +118,7 @@ python train_gdm_model.py
 ```
 
 **Note:**\
-When working with the Z-only dataset, remember that **feature dimensions change (11 vs. 33 features)**—this must be adjusted in your training scripts. 
+When working with the Z-only dataset, remember that feature dimensions change (11 vs. 33 features)—this must be adjusted in your training scripts. 
 
 ---
 
@@ -133,7 +133,7 @@ Confusion Matrix:
 Accuracy: 0.8423
 ```
 
-And here’s a **confusion matrix after scaling up to 50,000 files with Gradient Descent** (performance improves significantly):
+And here’s a confusion matrix after scaling up to 50,000 files with Gradient Descent (performance improves significantly):
 
 ![alt text](https://github.com/OliEhlbeck/SeismicDataClassification/blob/3389fc589a78dfd08f12f134aae86efff304ad48/images/ConfusionMatrixGradienDescent.jpg?raw)
 
@@ -144,13 +144,13 @@ And here’s a **confusion matrix after scaling up to 50,000 files with Gradient
 
 Some open questions for future research:
 
-- **Are rockfalls and hybrid events inherently this separable?**
-- Could these high accuracies reflect **overfitting or sampling bias**?
-- **How transferable are models trained on volcanic regions (e.g., Montserrat) to non-volcanic regions (e.g., California)?**
+- Are rockfalls and hybrid events inherently this separable?
+- Could these high accuracies reflect overfitting or sampling bias?
+- How transferable are models trained on volcanic regions (e.g., Montserrat) to non-volcanic regions (e.g., California)?
 
-A promising line of research is to **train models on volcanic datasets and test them on tectonic earthquake datasets (and vice versa)** to assess generalization across different geophysical settings.
+A promising line of research is to train models on volcanic datasets and test them on tectonic earthquake datasets (and vice versa) to assess generalization across different geophysical settings.
 
-I see this project as a **starting point for machine learning in geoscience**, and hope to contribute to further development and collaboration in this field.
+I see this project as my starting point in machine learning for geoscience, and aim to contribute to further development and collaboration in this field in the future.
 
 ---
 
